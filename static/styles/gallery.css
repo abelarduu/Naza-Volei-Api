@@ -1,0 +1,27 @@
+h3 {
+    font-family: 'oswald';
+    font-size: 70px;
+    margin-top: 160px;
+}
+
+#gallery {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.card-img {
+    width: 500px;
+    border-radius: 25px;
+    margin: 40px;
+}
+
+section {
+    height: auto;
+}
+
+@media screen and (max-width: 375px) {
+    #gallery img {
+        width: 15rem;
+    }
+}

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: url("../assets/images/common/volleyball-net.jpg") center bottom / cover no-repeat;
+    height: 30rem;
+}
+
+header > div {
+    width: 31.25rem;
+}
+
+h1 {
+    font-family: 'Oswald';
+    color: whitesmoke;
+    font-size: 110px;
+}
+
+nav > a {
+    margin: 0 2rem;
+    font-family: 'Oswald';
+    font-size: 30px;
+    color: black;
+}
+
+main {
+    background-color: rgb(255, 249, 249);
+    flex-direction: column;
+}
+
+section {
+    font-size: larger;
+    height: 500px;
+}
+
+button {
+    font-family: 'Oswald';
+    font-size: 30px;
+    width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 40px;
+}
+
+footer {
+    flex-direction: column;
+    background: linear-gradient(to bottom, #0d0d0d 0%, #0a192f 50%, #06121f 100%);
+    color: white;
+    height: 300px;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#ball {
+    position: absolute;
+    top: 23rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#ball.hover-effect:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.hover-effect {
+    display: inline-block;
+    transition: transform .5s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.2);
+}
+
+.social-icon {
+    width: 64px;
+    margin: 25px;
+}
+
+@media (max-width: 425px) {
+    header {
+        background: url("../assets/images/common/volleyball-net.jpg") center / cover no-repeat;
+        height: 20rem;
+    }
+
+    h1 { 
+        font-size: 50px;
+    }
+
+    nav > a {
+        font-size: 22px;
+        margin: 8px;
+    }
+
+    p {
+        margin: 10px 3px;
+    }
+    
+    #ball {
+        top: 12rem;
+        transform: scale(0.6) translateX(-62.5vw);
+    }
+
+    #ball.hover-effect:hover {
+        transform: translateX(-50%) scale(0.7);
+    }
+
+    footer { height: 14rem; }
+
+    .social-icon { width: 2rem; }
+}
+
+@media screen and (max-width: 768px){
+    *{
+        font-size: 16px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        height: 15rem;
+    }
+
+    .social-icon {
+        width: 3rem;
+    }
+}

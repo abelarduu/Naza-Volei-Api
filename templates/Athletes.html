@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/Athletes.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/volleyball-icon.png') }}">
+    
+    <title>Naza Volei</title>
+</head>
+
+<body>
+    <header class="centered-container banner">
+        <div>
+            <h1 class="hover-effect">Naza-Volei</h1>
+    
+            <nav>
+                <a href="/" class="hover-effect">Sobre</a>
+                <a href="/Galeria" class="hover-effect">Galeria</a>
+                <a href="#athlete-rankings" class="hover-effect">Atletas</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="centered-container banner">
+            <img src="{{ url_for('static', filename='assets/images/common/ball.png') }}" class="hover-effect" id="ball" alt="">
+            <h3 class="hover-effect">Ranking de Atletas</h3>
+        </section>
+        
+        <section id="athlete-rankings">
+            <ul>
+                <li class="athlete hover-effect">
+                    <img src="{{ url_for('static', filename='assets/images/athletes/ygor-icon.png') }}" alt="" class="athlete-photo">
+                    <h3 class="athlete-name">Ygor Rafael</h3>
+                </li>
+
+                <li class="athlete hover-effect">
+                    <img src="{{ url_for('static', filename='assets/images/athletes/Abel-icon.png') }}" alt="" class="athlete-photo">
+                    <h3 class="athlete-name">Abel Lucas</h3>
+                </li>
+
+                <li class="athlete hover-effect">
+                    <img src="{{ url_for('static', filename='assets/images/athletes/Miguel-icon.png') }}" alt="" class="athlete-photo">
+                    <h3 class="athlete-name">Miguel</h3>
+                </li>
+
+                <li class="athlete hover-effect">
+                    <img src="{{ url_for('static', filename='assets/images/athletes/Davi-icon.png') }}" alt="" class="athlete-photo">
+                    <h3 class="athlete-name">Davi</h3>
+                </li>
+            </ul>
+        </section>
+    </main>
+           
+    <footer class="centered-container" id="contact">
+        <p>&copy; 2026 Abel Lucas. Todos os direitos reservados.</p>
+        <div>
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/instagram-icon.png') }}" class="social-icon hover-effect">
+            </a>
+
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/whatsapp-icon.png') }}" class="social-icon hover-effect">
+            </a>
+
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/gmail-icon.png') }}" class="social-icon hover-effect">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

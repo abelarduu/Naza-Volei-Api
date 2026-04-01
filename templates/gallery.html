@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/volleyball-icon.png') }}">
+    
+    <title>Naza Volei</title>
+</head>
+
+<body>
+    <header class="centered-container banner">
+        <div>
+            <h1 class="hover-effect">Naza-Volei</h1>
+    
+            <nav>
+                <a href="/" class="hover-effect">Sobre</a>
+                <a href="#gallery" class="hover-effect">Galeria</a>
+                <a href="/Atletas" class="hover-effect">Atletas</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="centered-container banner">
+            <img src="{{ url_for('static', filename='assets/images/common/ball.png') }}" class="hover-effect" id="ball" alt="">
+            <h3 class="hover-effect">Galeria</h3>
+        </section>
+        
+        <section id="gallery">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img1.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img2.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img3.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img4.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img5.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img6.jpg') }}" class="card-img hover-effect">
+            <img src="{{ url_for('static', filename='assets/images/gallery/img7.jpg') }}" class="card-img hover-effect">
+        </section>
+    </main>
+           
+    <footer class="centered-container" id="contact">
+        <p>&copy; 2026 Abel Lucas. Todos os direitos reservados.</p>
+        <div>
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/instagram-icon.png') }}" class="social-icon hover-effect">
+            </a>
+
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/whatsapp-icon.png') }}" class="social-icon hover-effect">
+            </a>
+
+            <a href="">
+                <img src="{{ url_for('static', filename='assets/icons/gmail-icon.png') }}" class="social-icon hover-effect">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

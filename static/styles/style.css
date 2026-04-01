@@ -1,0 +1,62 @@
+section p {
+    width: 50rem;
+}
+
+#banner-1 {
+    background: url("../assets/images/common/volleyball-on-sand.jpg") center / cover no-repeat;
+    background-position-y: -110px;
+    height: 800px;
+}
+
+#gallery {
+    text-align: justify;
+    height: 800px;
+}
+
+#banner-2 {
+    background: url("../assets/images/common/volleyball-on-sand 2.jpg") center / cover no-repeat;
+    height: 800px;
+}
+
+#img-volleyball-match {
+    margin: 50px;
+    height: 450px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 425px){
+    #banner-1, #banner-2 {
+        background-position-y: auto;
+    }
+    
+    #img-volleyball-match {
+        height: 170px;
+    }
+
+    section {
+        margin: auto;
+        height: auto;
+    }
+    
+    #about p{
+        padding: 60px 35px;
+        margin: 20px auto;
+    }
+
+    section p{
+        width: auto;
+        text-align: justify;
+        padding: 0px 40px;
+        margin: auto;
+    }
+
+    #gallery{
+        flex-direction: column;
+    }
+
+    #img-volleyball-match {
+        margin: 20px;
+        height: 18rem;
+        border-radius: 25px;
+    }
+}
