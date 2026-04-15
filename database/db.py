@@ -12,21 +12,11 @@ class dataBase:
         self.create_tables()
 
     def create_tables(self):
-        """Cria as tabelas Athletes e Categories no banco de dados."""
+        """Cria a tabela Athletes no banco de dados."""
         self.cur.execute("""CREATE TABLE IF NOT EXISTS Athletes (
                             id INTEGER PRIMARY KEY AUTOINCREMENT,
                             name VARCHAR(40),
-                            cpf VARCHAR(11),
-                            age INT,
-                            weight FLOAT,
-                            height FLOAT,
-                            sex VARCHAR(1))""")
-
-        self.cur.execute("""CREATE TABLE IF NOT EXISTS Categories (
-                            athlete_id INTEGER,
-                            name VARCHAR(40),
-                            weight FLOAT,
-                            FOREIGN KEY (athlete_id) REFERENCES Athletes(id))""")
+                            icon_path VARCHAR(255))""")
 
     def query(self, query: str, data=tuple()):
         """Executa uma consulta no banco de dados e faz commit ou rollback em caso de erro."""

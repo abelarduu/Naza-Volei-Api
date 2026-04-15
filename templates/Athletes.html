@@ -32,25 +32,16 @@
         
         <section id="athlete-rankings">
             <ul>
+                {% for atleta in atletas %}
                 <li class="athlete hover-effect">
-                    <img src="{{ url_for('static', filename='assets/images/athletes/ygor-icon.png') }}" alt="" class="athlete-photo">
-                    <h3 class="athlete-name">Ygor Rafael</h3>
+                    <img src="{{ url_for('static', filename=atleta.icon) }}" 
+                        alt="" 
+                        class="athlete-photo">
+                    <h3 class="athlete-name">
+                        {{ atleta.name }}
+                    </h3>
                 </li>
-
-                <li class="athlete hover-effect">
-                    <img src="{{ url_for('static', filename='assets/images/athletes/Abel-icon.png') }}" alt="" class="athlete-photo">
-                    <h3 class="athlete-name">Abel Lucas</h3>
-                </li>
-
-                <li class="athlete hover-effect">
-                    <img src="{{ url_for('static', filename='assets/images/athletes/Miguel-icon.png') }}" alt="" class="athlete-photo">
-                    <h3 class="athlete-name">Miguel</h3>
-                </li>
-
-                <li class="athlete hover-effect">
-                    <img src="{{ url_for('static', filename='assets/images/athletes/Davi-icon.png') }}" alt="" class="athlete-photo">
-                    <h3 class="athlete-name">Davi</h3>
-                </li>
+                {% endfor %}
             </ul>
         </section>
     </main>
