@@ -1,4 +1,4 @@
-from flask import Flask, render_template  
+from flask import Flask, render_template
 from database import DB
 import os
 
@@ -8,18 +8,22 @@ app = Flask(__name__)
 def index():
     return render_template("index.html") 
 
-@app.route("/Galeria")
+
+@app.route("/galeria")
 def gallery():
     return render_template("gallery.html") 
 
-@app.route("/Atletas")
+
+@app.route("/atletas")
 def athletes():
-    """Retorna todos os atletas cadastrados ou uma mensagem de ausência de atletas."""
+    # pega dados do banco
+    DB.query("SELECT name, icon_path FROM Athletes")
+    res = DB.cur.fetchall()
+
+    # transforma no formato do Jinja
     dados = [
-        {"name": "Ygor Rafael", "icon": "assets/images/athletes/ygor-icon.png"},
-        {"name": "Abel Lucas", "icon": "assets/images/athletes/Abel-icon.png"},
-        {"name": "Miguel", "icon": "assets/images/athletes/Miguel-icon.png"},
-        {"name": "Davi", "icon": "assets/images/athletes/Davi-icon.png"}
+        {"name": r[0], "icon": r[1]}
+        for r in res
     ]
 
     return render_template("Athletes.html", atletas=dados)
